@@ -2,3 +2,4 @@
 .vscode/
 .idea/
 *.log
+# GitHub is for source code, not compiled files

@@ -3,9 +3,9 @@ public class G31BinarySearch {
         int[] arr = {2,4,6,8,10,12,14,16};
         int target = 12;
         int low=0, high = arr.length-1;
-        boolean found = false;
+        boolean found = false;  //keep track whether element is found or not
         while(low<=high){
-            int mid = low+(high-low)/2;
+            int mid = low+(high-low)/2;  //This avoids overflow (better than (low+high)/2)
             if(arr[mid] == target){
                 System.out.println("Element found at index: " + mid);
                 found = true;

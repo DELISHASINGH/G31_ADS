@@ -1,0 +1,40 @@
+class Solution {
+    public int calPoints(String[] operations) {
+        // operations=["5", "2", "C", "D", "+"]
+        //operations="5";
+        //stack=[5] score add
+        //operations="2";
+        // stack=[5,2], score add
+
+        //operations = "C" stack=[5]
+        //operations = "D" stack=[5,10]
+        //operations = "+" stack =[5,10,15]
+        //final scores = 5+10+15=30
+        Stack<Integer>st = new Stack<>();
+        for(String a:operations){
+            if(a.equals("C")){
+            st.pop();
+            }
+        
+        else if(a.equals("D")){
+            st.push(st.peek()*2);
+        }
+        else if(a.equals("+")){
+            int last=st.pop();
+            int updatedScore=last+st.peek();
+            st.push(last);
+            st.push(updatedScore);
+        }
+        else{
+            st.push(Integer.parseInt(a));
+        }
+    }
+    
+    int sum = 0;
+    for(int num : st)
+    sum+=num;
+    return sum;
+}
+    
+} 
+    

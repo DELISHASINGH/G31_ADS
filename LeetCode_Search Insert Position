@@ -1,0 +1,14 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for(int i=0; i<nums.length;i++){
+            if(nums[i]>=target){
+                return i;
+            }
+        }
+        return nums.length; //bcz target is not found in the whole array we return the length, Target is bigger than ALL elements in the array. 
+        //Last index = length - 1
+        //Next position = length
+        //So when we return nums.length, we are saying:
+        //“Target belongs at the end.” i.e. insert at the end
+    }
+}

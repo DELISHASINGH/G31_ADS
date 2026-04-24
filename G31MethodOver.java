@@ -20,3 +20,4 @@ class Student{
     }
     
 }
+//constructor initialize the object and method overloading is same method name with different parameters.

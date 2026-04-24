@@ -1,6 +1,6 @@
 public class G31Override {
     public static void main(String[] args) {
-        Child c = new Child(); // Creating an object of Child class
+        Child c = new Child(); // Creating an object of Child class = constructor new is the keyword, reserved, everytime it make new object 
         c.details(); // Calling the overridden method
     }
 }
